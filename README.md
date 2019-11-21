@@ -1,7 +1,8 @@
-[![NuGet](https://img.shields.io/nuget/v/extent.svg)](https://www.nuget.org/packages/extent)
+[![NuGet](https://img.shields.io/nuget/v/extent.netcore.svg)](https://www.nuget.org/packages/extent.netcore)
+[![NuGet](https://img.shields.io/nuget/dt/extent.netcore.svg)](https://www.nuget.org/packages/extent.netcore/)
 ![](https://img.shields.io/github/license/extent-framework/extentreports-csharp.svg)
 
-## Extent .NET CLI
+## Extent .NET CORE CLI
 
 The extentreports-dotnet-cli deprecates [ReportUnit](https://github.com/reportunit/reportunit). Extent Framework is actively maintained and allows using a host of reporters making it very simple to generate test reports. [Klov](http://klov.herokuapp.com/) is the framework's report server and can also be integrated as part of this CLI.
 
