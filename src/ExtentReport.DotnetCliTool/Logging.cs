@@ -1,7 +1,7 @@
-﻿using AventStack.ExtentReports.CLI.Model;
+﻿using AventStack.ExtentReports.DotnetCliTool.Model;
 using System;
 
-namespace AventStack.ExtentReports.CLI
+namespace AventStack.ExtentReports.DotnetCliTool
 {
     internal class Logger
     {

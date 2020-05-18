@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <IsPackable>true</IsPackable>
+    <!--<PackAsTool>true</PackAsTool>-->
+    <ToolCommandName>extent</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <RootNamespace>AventStack.ExtentReports.DotnetCliTool</RootNamespace>
+    <AssemblyName>extent</AssemblyName>
+    <StartupObject>AventStack.ExtentReports.DotnetCliTool.Program</StartupObject>
+    <PackageId>extent.netcore</PackageId>
+    <Company>Paris Huang</Company>
+    <Authors>Paris Huang</Authors>
+    <Product>extent.netcore</Product>
+    <AssemblyVersion>1.9.0</AssemblyVersion>
+    <FileVersion>1.9.0</FileVersion>
+    <Version>1.9.0</Version>
+    <Description>Convert nunit xml file to html report, dotnet core support for extent cli tool.</Description>
+    <Copyright>Copyright © 2020 Software Freedom Conservancy</Copyright>
+    <PackageTags>dotnet-extent, extent, nuint, nunitreport, html report</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExtentReports.Core" Version="1.0.3" />
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="3.0.0" />
+    <PackageReference Include="MongoDB.Bson" Version="2.10.4" />
+  </ItemGroup>
+
+  <Target Name="CollectRuntimeOutputs" BeforeTargets="_GetPackageFiles">
+    <!-- Collect these items inside a target that runs after build but before packaging. -->
+    <ItemGroup>
+      <Content Include="$(OutputPath)\publish\**\*">
+        <Pack>true</Pack>
+        <PackagePath>build\</PackagePath>
+      </Content>
+    </ItemGroup>
+  </Target>
+
+</Project>

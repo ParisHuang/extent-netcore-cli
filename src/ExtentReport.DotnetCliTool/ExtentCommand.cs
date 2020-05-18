@@ -1,17 +1,23 @@
-﻿using AventStack.ExtentReports.CLI.Extensions;
-using AventStack.ExtentReports.CLI.Model;
-using AventStack.ExtentReports.CLI.Parser;
+using AventStack.ExtentReports.DotnetCliTool.Extensions;
+using AventStack.ExtentReports.DotnetCliTool.Model;
+using AventStack.ExtentReports.DotnetCliTool.Parser;
 using AventStack.ExtentReports.Reporter;
-
 using McMaster.Extensions.CommandLineUtils;
-
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
-namespace AventStack.ExtentReports.CLI
+namespace AventStack.ExtentReports.DotnetCliTool
 {
-    internal class Program
+    [Command(
+        Name = "dotnet extent",
+        FullName = "dotnet-extent",
+        Description = "Convert xmil file to html report."
+    )]
+    [HelpOption]
+    [VersionOptionFromMember(MemberName = nameof(GetVersion))]
+    public class ExtentCommand
     {
         private const string DefaultBaseDirectory = "Reports";
         private Logger _logger;
@@ -38,12 +44,6 @@ namespace AventStack.ExtentReports.CLI
 
         [Option("--merge")]
         private bool Merge { get; set; } = false;
-
-
-        private static void Main(string[] args)
-        {
-            CommandLineApplication.Execute<Program>(args);
-        }
 
         private void OnExecute()
         {
@@ -125,5 +125,7 @@ namespace AventStack.ExtentReports.CLI
                 _logger.WriteLine(LoggingLevel.Normal, $"The v3html report will be output to '{output}'.");
             }
         }
+
+        private static string GetVersion() => typeof(ExtentCommand).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion;
     }
 }

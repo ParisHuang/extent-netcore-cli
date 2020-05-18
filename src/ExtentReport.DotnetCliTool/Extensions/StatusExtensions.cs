@@ -1,6 +1,6 @@
 ﻿using AventStack.ExtentReports;
 
-namespace AventStack.ExtentReports.CLI.Extensions
+namespace AventStack.ExtentReports.DotnetCliTool.Extensions
 {
     internal static class StatusExtensions
     {

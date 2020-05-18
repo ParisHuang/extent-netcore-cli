@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "ExtentReportNetCoreCLI": {
-      "commandName": "Project",
-      "commandLineArgs": "-i ./Reports/xunit_results.xml -o ./Reports/ -r v3html"
-    }
-  }
-}

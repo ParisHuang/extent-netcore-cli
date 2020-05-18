@@ -1,4 +1,4 @@
-﻿namespace AventStack.ExtentReports.CLI.Parser
+﻿namespace AventStack.ExtentReports.DotnetCliTool.Parser
 {
     interface IParser
     {

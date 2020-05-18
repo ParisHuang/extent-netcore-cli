@@ -1,8 +1,8 @@
-﻿using AventStack.ExtentReports.CLI.Model;
+﻿using AventStack.ExtentReports.DotnetCliTool.Model;
 
 using System;
 
-namespace AventStack.ExtentReports.CLI.Extensions
+namespace AventStack.ExtentReports.DotnetCliTool.Extensions
 {
     internal static class KnownFileExtensions
     {

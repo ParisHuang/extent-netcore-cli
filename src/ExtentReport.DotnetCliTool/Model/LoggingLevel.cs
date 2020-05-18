@@ -1,4 +1,4 @@
-﻿namespace AventStack.ExtentReports.CLI.Model
+﻿namespace AventStack.ExtentReports.DotnetCliTool.Model
 {
     internal enum LoggingLevel
     {

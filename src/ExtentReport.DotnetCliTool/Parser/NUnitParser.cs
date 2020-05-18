@@ -1,13 +1,13 @@
 ﻿using AventStack.ExtentReports.MarkupUtils;
 
-using AventStack.ExtentReports.CLI.Extensions;
+using AventStack.ExtentReports.DotnetCliTool.Extensions;
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 
-namespace AventStack.ExtentReports.CLI.Parser
+namespace AventStack.ExtentReports.DotnetCliTool.Parser
 {
     internal class NUnitParser : IParser
     {
